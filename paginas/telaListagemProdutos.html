@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito Giostri - Materiais de Construção</title>
+    <link rel="stylesheet" href="../assets/css/componentes/header-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css">
+    <link rel="stylesheet" href="../assets/css/style-telaListagemProdutos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="sidebar"></div>
+    <div id="header"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="../assets/img/logo-teladelogin.png" alt="Depósito Giostri" class="hero-logo">
+                <h1>A BASE SÓLIDA PARA O SEU PROJETO</h1>
+                <p>Materiais de qualidade para sua construção</p>
+            </div>
+        </section>
+
+        <section id="cimento" class="department-section">
+            <h2 class="section-title">Cimento</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="tijolos" class="department-section">
+            <h2 class="section-title">Tijolos</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="ferragens" class="department-section">
+            <h2 class="section-title">Ferragens</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="tintas" class="department-section">
+            <h2 class="section-title">Tintas</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="madeiras" class="department-section">
+            <h2 class="section-title">Madeiras</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="hidraulica" class="department-section">
+            <h2 class="section-title">Hidráulica</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="eletrica" class="department-section">
+            <h2 class="section-title">Elétrica</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="ferramentas" class="department-section">
+            <h2 class="section-title">Ferramentas</h2>
+            <div class="carousel-container">
+                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel">
+                </div>
+                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Seção principal do produto -->
+                <div class="product-main">
+                    <div class="product-image-container">
+                        <img id="modalProductImage" src="" alt="Imagem do produto" class="modal-image">
+                    </div>
+    
+                    <div class="product-info">
+                        <div class="product-name-container">
+                            <h2 id="modalProductName"></h2>
+                            <button class="favorite-button" title="Adicionar aos favoritos">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="product-meta">
+                            <span id="modalProductPrice" class="product-price"></span>
+                            <span id="modalProductCategory" class="product-category"></span>
+                        </div>
+                        
+                        <p id="modalProductDescription" class="product-description"></p>
+                        <div class="product-stock" id="estoqueDisponivel"></div>
+    
+                        <div class="quantity-control">
+                            <button id="decreaseQuantity" class="qty-btn">-</button>
+                            <input type="number" id="quantity" value="1" min="1" class="qty-input">
+                            <button id="increaseQuantity" class="qty-btn">+</button>
+                        </div>
+    
+                        <button class="add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+    
+                
+                <!-- Seção de comentários -->
+                <div class="product-reviews">
+                    <h3 class="reviews-title">
+                        <i class="fas fa-comments"></i> Comentários
+                        <span id="reviewsCount">0</span>
+                    </h3>
+    
+                    <!-- Formulário de comentário -->
+                    <div id="reviewForm" class="review-form">
+                        <div class="user-info">
+                            <img id="currentUserAvatar" src="default-avatar.jpg" alt="Usuário" class="user-avatar">
+                            <span id="currentUserName" class="user-name">Usuário</span>
+                        </div>
+                        <textarea id="reviewComment" placeholder="Escreva seu comentário..."
+                            class="review-textarea"></textarea>
+                        <button id="submitReview" class="submit-review-btn" disabled>
+                            <i class="fas fa-paper-plane"></i> Enviar Comentário
+                        </button>
+                    </div>
+    
+                    <!-- Lista de comentários -->
+                    <div id="reviewsList" class="reviews-list">
+                        <!-- Template de comentário (oculto) -->
+                        <div id="reviewTemplate" class="review-item" style="display:none;">
+                            <div class="review-header">
+                                <img src="" alt="" class="review-avatar">
+                                <div class="review-user-info">
+                                    <span class="review-name"></span>
+                                    <span class="review-date"></span>
+                                </div>
+                                <div class="review-actions-menu">
+                                    <button class="menu-toggle">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </button>
+                                    <div class="actions-dropdown">
+                                        <button class="edit-review">
+                                            <i class="fas fa-edit"></i> Editar
+                                        </button>
+                                        <button class="delete-review">
+                                            <i class="fas fa-trash"></i> Excluir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <p class="review-text"></p>
+                                <div class="edit-review-form" style="display:none;">
+                                    <textarea class="edit-review-text"></textarea>
+                                    <div class="edit-actions">
+                                        <button class="save-edit">Salvar</button>
+                                        <button class="cancel-edit">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-interactions">
+                                <button class="action-like">
+                                    <i class="far fa-thumbs-up"></i>
+                                    <span class="like-count">0</span>
+                                </button>
+                                <button class="action-dislike">
+                                    <i class="far fa-thumbs-down"></i>
+                                    <span class="dislike-count">0</span>
+                                </button>
+                                <span class="review-helpful">0 pessoas acharam útil</span>
+                            </div>
+                        </div>
+    
+                        <!-- Mensagem quando não há comentários -->
+                        <div class="no-reviews">
+                            <i class="far fa-comment-dots"></i>
+                            <p>Nenhum comentário ainda. Seja o primeiro a comentar!</p>
+                        </div>
+                    </div>
+    
+                    <!-- Paginação -->
+                    <div id="reviewsPagination" class="reviews-pagination">
+                        <button id="prevPage" class="pagination-btn" disabled>
+                            <i class="fas fa-chevron-left"></i> Anterior
+                        </button>
+                        <span class="page-info">Página <span id="currentPage">1</span> de <span
+                                id="totalPages">1</span></span>
+                        <button id="nextPage" class="pagination-btn" disabled>
+                            Próxima <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/componentes/script-sidebar.js"></script>
+    <script src="../assets/js/componentes/script-header.js"></script>
+    <script src="../assets/js/componentes/script-footer.js"></script>
+    <script src="../assets/js/script-telaListagemProdutos.js"></script>
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos - ConstruMax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style-telaMeusPedidos.css">
+    <link rel="stylesheet" href="../assets/css/componentes/header-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="sidebar"></div>
+
+    <div class="container">
+        <div class="cabeçalho">
+            <h1 class="page-title">Meus Pedidos</h1>
+            <div class="filter-options">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Em andamento</button>
+                <button class="filter-btn">Entregues</button>
+                <button class="filter-btn">Cancelados</button>
+            </div>
+        </div>
+        
+        <div class="pedidos-grid" id="pedidosList"></div>
+    </div>
+    
+    <div class="modal" id="statusModal">
+        <div class="modal-conteudo">
+            <button class="close-modal">&times;</button>
+            <h2 class="modal-title">Status do Pedido</h2>
+            <p class="modal-subtitle">Acompanhe o andamento do seu pedido</p>
+            
+            <div class="modal-info">
+                <div class="modal-info-item">
+                    <span class="modal-info-label">Número do Pedido</span>
+                    <span class="modal-info-value" id="modalPedidoNumero"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="modal-info-label">Data do Pedido</span>
+                    <span class="modal-info-value" id="modalPedidoData"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="modal-info-label">Cliente</span>
+                    <span class="modal-info-value" id="modalPedidoCliente"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="modal-info-label">Endereço</span>
+                    <span class="modal-info-value" id="modalPedidoEndereco"></span>
+                </div>
+                <div class="modal-info-item">
+                    <span class="modal-info-label">Pagamento</span>
+                    <span class="modal-info-value" id="modalPedidoPagamento"></span>
+                </div>
+            </div>
+            
+            <div class="status-tracker" id="statusTracker"></div>
+            
+            <div class="modal-actions" id="modalActions"></div>
+        </div>
+    </div>
+    
+    <div class="modal" id="confirmationModal">
+        <div class="modal-conteudo confirmation-modal">
+            <h2 class="modal-title">Confirmação de Cancelamento</h2>
+            <p class="confirmation-text">Deseja realmente cancelar o pedido?</p>
+            
+            <div class="confirmation-actions">
+                <button class="modal-btn btn-confirm" id="btnConfirmarCancelamento">
+                    <i class="fas fa-check"></i> Confirmar Cancelamento
+                </button>
+                <button class="modal-btn btn-back" id="btnVoltarCancelamento">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../assets/js/script-telaMeusPedidos.js"></script>
+    <script src="../assets/js/componentes/script-header.js"></script>
+    <script src="../assets/js/componentes/script-sidebar.js"></script>
+    <script src="../assets/js/componentes/script-footer.js"></script>
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+</body>
+</html>

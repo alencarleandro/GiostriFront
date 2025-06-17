@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Produtos</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <link rel="stylesheet" href="../assets/css/componentes/header-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css">
+    <link rel="stylesheet" href="../assets/css/style-telaGerenciarProdutos.css">
+</head>
+
+<body>
+    <div id="sidebar"></div>
+
+    <div class="app-container">
+        <div id="header"></div>
+        
+        <main class="main-content">
+            <div class="content-grid">
+                <section class="product-form">
+                    <h2>Cadastrar Produto</h2>
+                    <form id="productForm" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nome do Produto" id="productName" maxlength="100" required>
+                            <span class="char-count">0/100</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Preço (R$)" id="productPrice" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productQuantity">Quantidade (unidades)</label>
+                            <div class="quantity-input">
+                                <button type="button" class="quantity-btn minus">-</button>
+                                <input type="number" class="form-control" id="productQuantity" min="1" max="100" value="1">
+                                <button type="button" class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select class="form-control" id="productCategory" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="Cimento">Cimento</option>
+                                <option value="Tijolos">Tijolos</option>
+                                <option value="Ferragens">Ferragens</option>
+                                <option value="Tintas">Tintas</option>
+                                <option value="Madeiras">Madeiras</option>
+                                <option value="Hidráulica">Hidráulica</option>
+                                <option value="Elétrica">Elétrica</option>
+                                <option value="Ferramentas">Ferramentas</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Descrição" id="productDescription" maxlength="500" required></textarea>
+                            <span class="char-count">0/500</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productImageUrl" style="display: block; margin-bottom: 0.5rem;">URL da Imagem do Produto *</label>
+                            <input type="text" class="form-control" placeholder="Cole a URL da imagem aqui" id="productImageUrl" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Salvar Produto</button>
+                    </form>
+                </section>
+
+                <section class="products-list">
+                    <h2>Produtos Cadastrados</h2>
+                    <div class="products-list-header">
+                        <div class="search-filter-container">
+                            <div class="search-bar1">
+                                <input type="search" class="form-control" placeholder="Pesquisar produtos..." id="searchInput" />
+                                <button class="clear-search" id="clearSearch">&times;</button>
+                            </div>
+                            <div class="filter-container">
+                                <button class="filter-btn" id="filterBtn">
+                                    <i class="fas fa-filter"></i> Filtrar
+                                </button>
+                                <div class="filter-options" id="filterOptions">
+                                    <div class="filter-option">
+                                        <label>Preço mínimo:</label>
+                                        <input type="number" class="form-control" id="minPrice" placeholder="R$ 0,00" step="0.01">
+                                    </div>
+                                    <div class="filter-option">
+                                        <label>Preço máximo:</label>
+                                        <input type="number" class="form-control" id="maxPrice" placeholder="R$ 0,00" step="0.01">
+                                    </div>
+                                    <button class="btn-primary" id="applyFilter">Aplicar</button>
+                                    <button class="btn" id="clearFilter">Limpar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="productsList">
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer id="footer"></footer>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="../assets/js/componentes/script-sidebar.js"></script>
+    <script src="../assets/js/componentes/script-header.js"></script>
+    <script src="../assets/js/componentes/script-footer.js"></script>
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+    <script src="../assets/js/script-telaGerenciarProdutos.js"></script>
+</body>
+</html>

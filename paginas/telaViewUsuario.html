@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giostri Construções - Minha Conta</title>
+    <link rel="stylesheet" href="../assets/css/style-telaViewUsuario.css">
+    <link rel="stylesheet" href="../assets/css/componentes/header-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="sidebar"></div>
+
+    <div class="main-container">
+        <div id="header"></div>
+
+        <main class="content">
+            <section class="welcome-card">
+                <div class="user-info">
+                    <img id="user-avatar" src="" alt="User Avatar">
+                    <div class="user-details">
+                        <h2 id="welcome-title">Bem-vindo</h2>
+                        <div class="email-container">
+                            <span id="user-email"></span>
+                            <button class="edit-icon"><i class="fas fa-pencil-alt"></i></button>
+                        </div>
+                        <button class="edit-btn">Editar Dados</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="shortcuts">
+                <h2><i class="fas fa-ellipsis"></i> ATALHOS</h2>
+                <div class="shortcuts-grid">
+                    <!-- Cards para todos os usuários -->
+                    <div class="shortcut-card">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Meus Pedidos</h3>
+                        <p>Veja históricos e acompanhe suas compras.</p>
+                    </div>
+                    <div class="shortcut-card">
+                        <i class="fas fa-user"></i>
+                        <h3>Meus Dados</h3>
+                        <p>Altere seus dados cadastrados, endereços ou cadastre um novo endereço.</p>
+                    </div>
+                    <div class="shortcut-card">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>Avaliações</h3>
+                        <p>Avalie suas compras e visualize suas avaliações e comentários.</p>
+                    </div>
+                    <div class="shortcut-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Favoritos</h3>
+                        <p>Consulte sua lista de produtos favoritos.</p>
+                    </div>
+
+                    <!-- Cards exclusivos para administrador -->
+                    <div class="shortcut-card admin-only">
+                        <i class="fas fa-boxes"></i>
+                        <h3>Gerenciar Estoque</h3>
+                        <p>Controle materiais e quantidades disponíveis.</p>
+                    </div>
+
+                    <div class="shortcut-card admin-only">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <h3>Gerenciar Relatórios</h3>
+                        <p>Gere relatórios financeiros detalhados.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <div id="footer"></div>
+    </div>
+
+    <script src="../assets/js/script-telaViewUsuario.js"></script>
+    <script src="../assets/js/componentes/script-header.js"></script>
+    <script src="../assets/js/componentes/script-sidebar.js"></script>
+    <script src="../assets/js/componentes/script-footer.js"></script>
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+</body>
+
+</html>

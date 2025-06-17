@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giostri Construções - Relatórios</title>
+  <link rel="stylesheet" href="../assets/css/style-telaViewUsuario.css" />
+  <link rel="stylesheet" href="../assets/css/componentes/header-componente.css" />
+  <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css" />
+  <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css" />
+  <link rel="stylesheet" href="../assets/css/style-telaRelatorios.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+</head>
+
+<body>
+  <div id="sidebar"></div>
+
+  <div class="main-container">
+    <div id="header"></div>
+
+    <main class="content">
+      <div class="reports-container">
+        <h1 class="reports-title">Painel Administrativo - Relatórios</h1>
+        <div class="reports-grid">
+
+          <div class="report-card" id="cardVendas">
+            <div class="report-icon"><i class="fas fa-chart-bar"></i></div>
+            <div class="report-title">Relatório de Vendas</div>
+            <div class="report-description">Este relatório mostra dados de vendas.</div>
+          </div>
+
+          <div class="report-card" id="cardUsuarios">
+            <div class="report-icon"><i class="fas fa-chart-pie"></i></div>
+            <div class="report-title">Relatório de Usuarios</div>
+            <div class="report-description">Este relatório mostra dados sobre os usuarios.</div>
+          </div>
+
+          <div class="report-card" id="cardEstoque">
+            <div class="report-icon"><i class="fas fa-boxes"></i></div>
+            <div class="report-title">Relatório de Estoque</div>
+            <div class="report-description">Este relatório mostra o status do estoque.</div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="../assets/js/componentes/script-header.js"></script>
+  <script src="../assets/js/componentes/script-sidebar.js"></script>
+  <script src="../assets/js/componentes/script-footer.js"></script>
+  <script src="../assets/js/requisicoes/requisicoes.js"></script>
+  <script src="../assets/js/script-telaRelatorio.js"></script>
+</body>
+
+</html>

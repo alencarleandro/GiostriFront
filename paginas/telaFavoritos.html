@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito Giostri - Favoritos</title>
+    <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/header-componente.css">
+    <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css">
+    <link rel="stylesheet" href="../assets/css/style-telaFavoritos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="sidebar"></div>
+    <div id="header"></div>
+
+    <main class="favorites-main">
+        <section class="favorites-section">
+            <div class="favorites-header">
+                <h1><i class="fas fa-heart"></i> Meus Favoritos</h1>
+            </div>
+
+            <div class="favorites-container">
+                <div class="favorites-empty">
+                    <i class="far fa-heart favorites-empty-icon"></i>
+                    <h2 class="favorites-empty-title">Sua lista de favoritos está vazia</h2>
+                    <p class="favorites-empty-message">Os produtos que você adicionar aos favoritos aparecerão aqui.
+                        Comece a explorar nossa loja e salve seus itens preferidos!</p>
+                    <a href="../paginas/telaListagemProdutos.html" class="btn-continue-shopping">
+                        Continuar comprando
+                    </a>
+                </div>
+
+                <div class="favorites-grid">
+                    <div class="favorite-item">
+                        <div class="favorite-image-container">
+                            <img src="../assets/images/produto-exemplo.jpg" alt="Nome do produto"
+                                class="favorite-image">
+                            <div class="favorite-badge">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="favorite-content">
+                            <h3 class="favorite-name">Produto de Exemplo - Descrição em Até Duas Linhas</h3>
+                            <div class="favorite-price-container">
+                                <span class="favorite-price">R$ 99,90</span>
+                                <span class="favorite-original-price">R$ 129,90</span>
+                            </div>
+                            <div class="favorite-actions">
+                                <button class="favorite-btn add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                                <button class="favorite-btn remove-favorite-btn">
+                                    <i class="fas fa-trash-alt"></i> Remover
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="favorites-summary">
+                <div class="summary-actions">
+                    <a href="../paginas/telaListagemProdutos.html" class="btn-continue-shopping">
+                        <i class="fas fa-arrow-left"></i> Continuar comprando
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+    <script src="../assets/js/script-telaFavoritos.js"></script>
+    <script src="../assets/js/componentes/script-sidebar.js"></script>
+    <script src="../assets/js/componentes/script-header.js"></script>
+    <script src="../assets/js/componentes/script-footer.js"></script>
+</body>
+
+</html>

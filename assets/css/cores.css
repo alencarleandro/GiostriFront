@@ -1,0 +1,29 @@
+:root {
+  /* Cores principais */
+  --cor-branca: #FFFFFF; /* Branco, usado para fundos neutros e textos escuros */
+  --cor-primaria: #007EA7; /* Cerúleo, cor principal para botões e destaques */
+  --cor-secundaria: #00A8E8; /* Azul Picton, usado para efeitos de hover e realces */
+  --cor-destaque: #003459; /* Azul da Prússia, ideal para títulos e textos importantes */
+  --cor-fundo: #00171F; /* Preto Rico, usado para fundos escuros e elegantes */
+
+  /* Botões */
+  --botao-primario: var(--cor-primaria); /* Cor principal dos botões */
+  --botao-primario-texto: var(--cor-branca); /* Texto branco para contraste */
+  --botao-primario-hover: var(--cor-secundaria); /* Efeito hover no botão principal */
+  --botao-primario-ativo: var(--cor-destaque); /* Efeito quando o botão for clicado */
+
+  --botao-secundario: var(--cor-destaque); /* Botão secundário com azul da Prússia */
+  --botao-secundario-texto: var(--cor-branca);
+  --botao-secundario-hover: var(--cor-primaria);
+  --botao-secundario-ativo: var(--cor-fundo);
+
+  /* Links e textos interativos */
+  --link: var(--cor-primaria); /* Links padrão na cor cerúleo */
+  --link-hover: var(--cor-secundaria); /* Efeito hover nos links */
+  --link-ativo: var(--cor-destaque); /* Quando o link for clicado */
+
+  /* Fundo e elementos visuais */
+  --fundo-principal: var(--cor-branca); /* Fundo principal do site */
+  --fundo-secundario: var(--cor-fundo); /* Fundo escuro para seções */
+  --borda-padrao: var(--cor-destaque); /* Cor para bordas sutis */
+}

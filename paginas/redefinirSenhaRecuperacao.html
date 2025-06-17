@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha</title>
+    <link rel="stylesheet" href="../assets/css/style-redefinirSenha.css">
+</head>
+<body>
+    <div class="conteudo">
+        <div class="cartao">
+            <div class="cabecalho">
+                <svg xmlns="http://www.w3.org/2000/svg" class="logotipo" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <h1>Redefinir Senha</h1>
+            </div>
+
+            <form id="formularioSenha" class="formulario">
+                <div class="grupo-formulario">
+                    <label for="senha">Nova Senha</label>
+                    <div class="campo-senha">
+                        <input type="password" id="senha" required>
+                        <button type="button" class="alternar-senha">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icone-olho" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="confirmarSenha">Confirmar Nova Senha</label>
+                    <div class="campo-senha">
+                        <input type="password" id="confirmarSenha" required>
+                        <button type="button" class="alternar-senha">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icone-olho" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="regras-senha">
+                    <h3>A senha deve conter:</h3>
+                    <ul>
+                        <li id="regra-tamanho">Mínimo 8 caracteres</li>
+                        <li id="regra-maiuscula">Uma letra maiúscula (A-Z)</li>
+                        <li id="regra-minuscula">Uma letra minúscula (a-z)</li>
+                        <li id="regra-numero">Um número (0-9)</li>
+                        <li id="regra-especial">Um caractere especial (!@#$%^&*)</li>
+                    </ul>
+                </div>
+
+                <div class="botoes">
+                    <button type="submit" id="botaoSalvar" class="botao botao-primario" disabled>
+                        Salvar Nova Senha
+                    </button>
+                    <button type="button" class="botao botao-secundario">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+    <script src="../assets/js/script-redefinirSenhaRecuperacao.js"></script>
+</body>
+</html>

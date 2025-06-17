@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+    <link rel="stylesheet" href="../assets/css/style-enviarEmailRecuperacao.css">
+</head>
+<body>
+    <div class="pagina">
+        <div class="cartao">
+            <div class="cabecalho">
+                <h1>Recuperação de Senha</h1>
+                <p class="subtitulo">Digite seu e-mail para receber um link de recuperação</p>
+            </div>
+
+            <div id="mensagem" class="mensagem oculto"></div>
+
+            <form id="formularioRecuperacao" class="formulario">
+                <div class="grupo-entrada">
+                    <label for="email" class="rotulo">Endereço de E-mail</label>
+                    <div class="campo-entrada">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icone-email">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="entrada"
+                            placeholder="Digite seu e-mail" 
+                            required
+                            aria-label="Digite seu endereço de e-mail"
+                        >
+                    </div>
+                    <p class="dica-campo">Você receberá um link para criar uma nova senha</p>
+                </div>
+
+                <button type="submit" id="botaoEnviar" class="botao-primario">
+                    <span class="texto-botao">Enviar Link de Recuperação</span>
+                    <div class="indicador-carregamento oculto"></div>
+                </button>
+
+                <div class="separador">
+                    <span class="texto-separador">ou</span>
+                </div>
+
+                <a href="../paginas/telaDeLogin.html" class="link-voltar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icone-voltar">
+                        <path d="m12 19-7-7 7-7"/>
+                        <path d="M19 12H5"/>
+                    </svg>
+                    Voltar para o Login
+                </a>
+            </form>
+
+            <div class="rodape">
+                <p class="texto-ajuda">
+                    Precisa de ajuda? 
+                </p>
+                <p class="link-suporte">Envie uma mensagem para nosso email:
+                    letdevs.engsoftware@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+    <script src="../assets/js/script-enviarEmailRecuperacao.js"></script>
+</body>
+</html>

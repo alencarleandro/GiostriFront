@@ -1,0 +1,59 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<header class="header">
+    <div class="top-bar">
+        <div class="logo"></div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Busque por materiais de construção">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="cidadeHeader"></span>
+            </div>
+        </div>
+        <div class="user-actions">
+            <div class="icons">
+                <a href="../paginas/telaCarrinho.html" class="cart" data-tooltip="Carrinho"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="user-profile" id="userProfile">
+                <img id="imagemHeader" alt="User Avatar">
+                <span id="nomeHeader"></span>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <a href="#cimento">Cimento</a>
+        <a href="#tijolos">Tijolos</a>
+        <a href="#ferragens">Ferragens</a>
+        <a href="#tintas">Tintas</a>
+        <a href="#madeiras">Madeiras</a>
+        <a href="#hidraulica">Hidráulica</a>
+        <a href="#eletrica">Elétrica</a>
+        <a href="#ferramentas">Ferramentas</a>
+    </nav>
+
+    <div class="header-modal" id="headerProfileModal">
+        <div class="header-modal-content">
+            <div class="header-modal-header">
+                <div class="user-info">
+                    <img id="headerModalUserImage" alt="User Avatar">
+                    <div>
+                        <h3 id="headerModalUserName"></h3>
+                        <p id="headerModalUserEmail"></p>
+                    </div>
+                </div>
+                <span class="close-header-modal">&times;</span>
+            </div>
+            <div class="header-modal-body">
+                <a href="#" class="header-modal-option" id="headerMeuPerfil"><i class="fas fa-user"></i> Meu Perfil</a>
+                <a href="#" class="header-modal-option" id="headerMeusPedidos"><i class="fas fa-box"></i> Meus Pedidos</a>
+                <a href="#" class="header-modal-option" id="headerFavoritos"><i class="fas fa-heart"></i> Favoritos</a>
+                <a href="#" class="header-modal-option" id="headerConfiguracoes"><i class="fas fa-cog"></i> Configurações</a>
+                <a href="#" class="header-modal-option" id="headerLogoutBtn"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </div>
+        </div>
+    </div>
+</header>
+

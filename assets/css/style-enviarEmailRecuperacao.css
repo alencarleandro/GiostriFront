@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('cores.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--fundo-secundario);
+  color: var(--cor-destaque);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--fundo-secundario);
+}
+
+.cartao {
+  background-color: var(--fundo-principal);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 32rem;
+  border: 1px solid var(--borda-padrao);
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: var(--botao-primario);
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.subtitulo {
+  color: var(--cor-destaque);
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+.mensagem {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.mensagem.sucesso {
+  background-color: rgba(4, 120, 87, 0.1);
+  color: #047857;
+  border: 1px solid rgba(4, 120, 87, 0.2);
+}
+
+.mensagem.erro {
+  background-color: rgba(185, 28, 28, 0.1);
+  color: #b91c1c;
+  border: 1px solid rgba(185, 28, 28, 0.2);
+}
+
+.oculto {
+  display: none;
+}
+
+.formulario {
+  margin-bottom: 1.5rem;
+}
+
+.grupo-entrada {
+  margin-bottom: 1.5rem;
+}
+
+.rotulo {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--cor-destaque);
+}
+
+.campo-entrada {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.icone-email {
+  position: absolute;
+  left: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--cor-destaque);
+  opacity: 0.7;
+}
+
+.entrada {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  border: 1px solid var(--borda-padrao);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: var(--fundo-principal);
+  color: var(--cor-destaque);
+}
+
+.entrada:focus {
+  outline: none;
+  border-color: var(--botao-primario);
+  box-shadow: 0 0 0 3px rgba(0, 126, 167, 0.1);
+}
+
+.dica-campo {
+  font-size: 0.875rem;
+  color: var(--cor-destaque);
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+.botao-primario {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--botao-primario);
+  color: var(--botao-primario-texto);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.botao-primario:hover {
+  background-color: var(--botao-primario-hover);
+}
+
+.botao-primario:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.indicador-carregamento {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: girar 0.8s linear infinite;
+  position: absolute;
+  right: 1rem;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.separador {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.separador::before,
+.separador::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--borda-padrao);
+}
+
+.texto-separador {
+  padding: 0 1rem;
+  color: var(--cor-destaque);
+  opacity: 0.7;
+  font-size: 0.875rem;
+}
+
+.link-voltar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.icone-voltar {
+  margin-right: 0.5rem;
+}
+
+.link-voltar:hover {
+  color: var(--link-hover);
+  background-color: rgba(0, 126, 167, 0.05);
+}
+
+.rodape {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.texto-ajuda {
+  font-size: 0.875rem;
+  color: var(--cor-destaque);
+  opacity: 0.7;
+}
+
+.link-suporte {
+  color: var(--link);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-suporte:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .cartao {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

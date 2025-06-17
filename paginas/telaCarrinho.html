@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depósito Giostri - Carrinho</title>
+  <link rel="stylesheet" href="../assets/css/componentes/sidebar-componente.css">
+  <link rel="stylesheet" href="../assets/css/componentes/header-componente.css">
+  <link rel="stylesheet" href="../assets/css/componentes/footer-componente.css">
+  <link rel="stylesheet" href="../assets/css/style-telacarrinho.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="sidebar"></div>
+  <div id="header"></div>
+
+  <main class="cart-page">
+
+    <section class="cart-items" id="cart-items">
+    </section>
+
+    <section class="pagamento-section">
+      <h3>Forma de Pagamento</h3>
+      <fieldset>
+        <legend>Escolha o método:</legend>
+        <label>
+          <input type="radio" name="pagamento" value="pix" checked>
+          <img src="https://logopng.com.br/logos/pix-106.png" alt="Pix" width="80">
+        </label>
+
+
+        <label>
+          <input type="radio" name="pagamento" value="cartao">
+          <img src="https://cdn-icons-png.flaticon.com/512/71/71227.png" alt="Cartão de Crédito" width="80">
+        </label>
+      </fieldset>
+    </section>
+
+    <section class="endereco-entrega">
+      <h3>Endereço de Entrega</h3>
+      <div id="endereco-selecao">
+        <div class="loading-address">
+          <i class="fas fa-spinner fa-spin"></i> Carregando endereços...
+        </div>
+      </div>
+      <button id="btn-novo-endereco" class="btn-secondary">
+      </button>
+      <div id="endereco-selecionado-display">
+        <!-- O endereço selecionado será exibido aqui -->
+      </div>
+      <p id="frete">Frete: R$ 0,00</p>
+    </section>
+
+    <aside class="summary" id="summary">
+      <h2>Resumo do Pedido</h2>
+      <div id="resumo-itens">
+        <!-- Resumo por item será preenchido via JS -->
+      </div>
+      <p id="subtotal">Subtotal: R$ 0,00</p>
+      <p><strong id="total">Total: R$ 0,00</strong></p>
+      <button id="btnFinalizar">Finalizar Compra</button>
+      <a href="telaListagemProdutos.html" class="btn-voltar">← Continuar Comprando</a>
+    </aside>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Modal para o Payment Brick -->
+  <div id="modal-pagamento" class="modal-pagamento hidden">
+    <div class="modal-pagamento-content">
+      <span class="close-modal-pagamento">&times;</span>
+      <h3 id="modal-title">Pagamento com Cartão</h3>
+      <div id="paymentBrick_container"></div>
+      <div id="payment-feedback" class="hidden">
+        <div class="alert alert-success mt-3">
+          <i class="fas fa-check-circle"></i>
+          <span id="feedback-message">Pagamento configurado com sucesso! Clique em "Finalizar Compra".</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para o Pagamento via PIX -->
+  <div id="modalPix" class="modal-pagamento hidden">
+    <div class="modal-pagamento-content">
+      <span class="close-modal-pagamento"
+        onclick="document.getElementById('modalPix').classList.add('hidden')">&times;</span>
+      <h3>Pagamento via PIX</h3>
+
+      <div style="text-align: center;">
+        <p><strong>Escaneie o QR Code abaixo:</strong></p>
+        <img id="qrCodePixImg" src="" alt="QR Code PIX"
+          style="width: 100%; max-width: 250px; margin: 10px auto; border: 1px solid #ddd;">
+
+        <p style="margin: 15px 0 5px;"><strong>Ou copie o código:</strong></p>
+        <div style="display: flex; flex-direction: column; justify-content: center; gap: 20px; margin-bottom: 15px;">
+          <textarea class="codigo-pix" readonly
+            style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; resize: none;"
+            rows="3"></textarea>
+          <button onclick="copiarCodigoPix()"
+            style="align-self: center; padding: 10px 15px; background: #007ea7; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Copiar
+          </button>
+        </div>
+
+        <p class="valor-pix" style="font-size: 1.2em; font-weight: bold; color: #007ea7;"></p>
+
+        <div style="margin-top: 20px; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+          <p style="margin: 0; color: #6c757d;">
+            <i class="fas fa-info-circle"></i> O pedido será confirmado automaticamente quando o pagamento for aprovado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/componentes/script-sidebar.js"></script>
+  <script src="../assets/js/componentes/script-header.js"></script>
+  <script src="../assets/js/componentes/script-footer.js"></script>
+  <script src="../assets/js/requisicoes/requisicoes.js"></script>
+  <script src="https://sdk.mercadopago.com/js/v2" onerror="console.error('Falha ao carregar MercadoPago SDK')"></script>
+  <script src="../assets/js/script-telacarrinho.js"></script>
+</body>
+
+</html>

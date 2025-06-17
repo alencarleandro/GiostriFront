@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('cores.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--fundo-secundario);
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.imagem-formulario {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    padding: 1rem;
+}
+
+.imagem-formulario img {
+    width: 31rem;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: var(--fundo-principal);
+    padding: 3rem;
+}
+
+.cabecalho-formulario {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-login button {
+    border: none;
+    background-color: var(--botao-primario);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--botao-primario-texto);
+}
+
+.botao-login button:hover {
+    background-color: var(--botao-primario-hover);
+}
+
+.cabecalho-formulario h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--cor-primaria);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.caixa-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 200px;
+}
+
+.caixa-input input,
+.caixa-input select {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    width: 100%;
+}
+
+.caixa-input input:hover,
+.caixa-input select:hover {
+    background-color: #eeeeee75;
+}
+
+.caixa-input input:focus-visible,
+.caixa-input select:focus-visible {
+    outline: 1px solid var(--cor-primaria);
+}
+
+.caixa-input label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--cor-destaque);
+}
+
+.caixa-input input::placeholder {
+    color: #000000be;
+}
+
+.aviso-senha-container {
+    padding: 0 1rem;
+    margin-top: 1rem;
+}
+
+.requisitos-senha {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.botao-continuar {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.botao-continuar button {
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    background-color: var(--botao-primario);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--botao-primario-texto);
+}
+
+.botao-continuar button:hover {
+    background-color: var(--botao-primario-hover);
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 2.5rem; /* Espaço para o ícone do olho */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-outer-spin-button {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1629px) {
+    * {
+        font-size: small;
+    }
+
+    .imagem-formulario {
+        display: none;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .grupo-input {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 20rem;
+    }
+    
+    .caixa-input {
+        flex: 1 1 100%;
+    }
+}

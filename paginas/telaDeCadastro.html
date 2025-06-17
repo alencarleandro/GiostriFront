@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style-telaDeCadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagem-formulario">
+            <img src="../assets/img/imagem-teladecadastro.svg" alt="">
+        </div>
+        <div class="formulario">
+            <form action="#" class="editar-formulario">
+                <div class="cabecalho-formulario">
+                    <div class="titulo">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="botao-login">
+                        <button id="botao-voltar">Voltar</button>
+                        <button id="botao-entrar">Entrar</button>
+                    </div>
+                </div>
+
+                <div id="campos-pessoa-fisica">
+                    <div class="grupo-input">
+                        <div class="caixa-input">
+                            <label for="firstname">Nome</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="lastname">Sobrenome</label>
+                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome"
+                                required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="genero">Gênero</label>
+                            <select id="genero" name="genero" required>
+                                <option value="" disabled selected>Selecione seu gênero</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="outro">Outro</option>
+                                <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+                            </select>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF (XXX.XXX.XXX-XX)"
+                                required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="birthdate">Data de Nascimento</label>
+                            <input id="birthdate" type="date" name="birthdate" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="telefone">Telefone</label>
+                            <input id="telefone" type="tel" name="telefone" placeholder="Digite seu telefone" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="password">Senha</label>
+                            <div class="password-container">
+                                <input id="password" type="password" name="password" placeholder="Digite sua senha"
+                                    required>
+                                <i class="fas fa-eye toggle-password"
+                                    onclick="togglePasswordVisibility('password', this)"></i>
+                            </div>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="confirm-password">Confirme a Senha</label>
+                            <div class="password-container">
+                                <input id="confirm-password" type="password" name="confirm-password"
+                                    placeholder="Digite novamente sua senha" required>
+                                <i class="fas fa-eye toggle-password"
+                                    onclick="togglePasswordVisibility('confirm-password', this)"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="campos-endereco" style="display: none;">
+                    <h2>Endereço</h2>
+                    <div class="grupo-input">
+                        <div class="caixa-input">
+                            <label for="cep">CEP</label>
+                            <input id="cep" type="text" name="cep" placeholder="Digite seu CEP" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="rua">Rua/Avenida</label>
+                            <input id="rua" type="text" name="rua" placeholder="Digite sua rua ou avenida" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="numero">Número</label>
+                            <input id="numero" type="text" name="numero" placeholder="Digite o número" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="complemento">Complemento (opcional)</label>
+                            <input id="complemento" type="text" name="complemento" placeholder="Digite o complemento">
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="bairro">Bairro</label>
+                            <input id="bairro" type="text" name="bairro" placeholder="Digite seu bairro" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="cidade">Cidade</label>
+                            <input id="cidade" type="text" name="cidade" placeholder="Digite sua cidade" required>
+                        </div>
+
+                        <div class="caixa-input">
+                            <label for="estado">Estado</label>
+                            <input id="estado" type="text" name="estado" placeholder="Digite seu estado" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aviso-senha-container">
+                    <p class="requisitos-senha">
+                        <strong>A senha deve conter:</strong> mínimo 8 caracteres, letra maiúscula, minúscula, número e
+                        caractere especial (!@#$%^&*)
+                    </p>
+                </div>
+
+                <div class="botao-continuar">
+                    <button type="submit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="../assets/js/requisicoes/requisicoes.js"></script>
+    <script src="../assets/js/script-telaDeCadastro.js"></script>
+</body>
+</html>
