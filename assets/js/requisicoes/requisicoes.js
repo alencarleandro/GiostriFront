@@ -676,7 +676,7 @@ const ApiService = {
       if (resposta.status === 403) {
         // Token pode ser inválido - forçar novo login
         localStorage.removeItem("usuario");
-        window.location.href = "telaDeLogin.html";
+        window.location.href = "/paginas/telaDeLogin.html";
         throw new Error("Acesso negado - faça login novamente");
       }
 
@@ -725,7 +725,7 @@ const ApiService = {
       if (resposta.status === 403) {
         // Token inválido - forçar novo login
         localStorage.removeItem("usuario");
-        window.location.href = "telaDeLogin.html";
+        window.location.href = "/paginas/telaDeLogin.html";
         throw new Error("Acesso negado - faça login novamente");
       }
 
@@ -765,7 +765,7 @@ const ApiService = {
 
       if (resposta.status === 403) {
         localStorage.removeItem("usuario");
-        window.location.href = "telaDeLogin.html";
+        window.location.href = "/paginas/telaDeLogin.html";
         throw new Error("Acesso negado - faça login novamente");
       }
 

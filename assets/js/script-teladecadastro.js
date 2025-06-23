@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
           try {
             await ApiService.cadastrarUsuario(estado.dadosUsuario);
             alert("Cadastro realizado com sucesso!");
-            setTimeout(() => window.location.href = "telaDeLogin.html", 1000);
+            setTimeout(() => window.location.href = "/paginas/telaDeLogin.html", 1000);
           } catch (erro) {
             console.error("Erro no cadastro:", erro);
             alert(erro.message || "Erro ao cadastrar. Tente novamente.");
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     elementos.botaoContinuar.addEventListener('click', controller.handleContinuar);
     elementos.botaoVoltar.addEventListener('click', controller.handleVoltar);
     elementos.botaoEntrar.addEventListener('click', () => {
-      window.location.href = "telaDeLogin.html";
+      window.location.href = "/paginas/telaDeLogin.html";
     });
   
     // Inicialização

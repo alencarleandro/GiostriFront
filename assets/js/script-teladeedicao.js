@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         await ApiService.excluirUsuario(usuario.id);
         localStorage.removeItem("usuario");
-        window.location.href = "telaDeLogin.html";
+        window.location.href = "/paginas/telaDeLogin.html";
       } catch (erro) {
         console.error("Erro ao excluir conta:", erro);
         utils.mostrarFeedback("Erro ao excluir conta. Tente novamente.", "erro");

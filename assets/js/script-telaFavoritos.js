@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 function verificarAutenticacao() {
   const usuario = JSON.parse(localStorage.getItem('usuario'));
   if (!usuario) {
-      window.location.href = 'telaDeLogin.html';
+      window.location.href = '/paginas/telaDeLogin.html';
       return null;
   }
   return usuario;
@@ -59,7 +59,7 @@ function criarCardFavorito(produto) {
 
   card.innerHTML = `
       <div class="favorite-image">
-          <img src="${produto.url || '../assets/img/sem-imagem.jpg'}" alt="${produto.nome}">
+          <img src="${produto.url || '/assets/img/sem-imagem.jpg'}" alt="${produto.nome}">
       </div>
       <div class="favorite-details">
           <h3 class="favorite-name">${produto.nome}</h3>

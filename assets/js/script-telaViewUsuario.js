@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const usuario = JSON.parse(localStorage.getItem('usuario'));
 
     if (!usuario) {
-        window.location.href = "telaDeLogin.html";
+        window.location.href = "/paginas/telaDeLogin.html";
         return;
     }
 

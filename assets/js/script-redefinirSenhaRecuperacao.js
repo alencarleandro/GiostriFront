@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (botaoCancelar) {
       botaoCancelar.addEventListener('click', () => {
-          window.location.href = 'telaDeLogin.html';
+          window.location.href = '/paginas/telaDeLogin.html';
       });
   }
 
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
               await ApiService.redefinirSenha(email, senha);
               
               alert('Senha redefinida com sucesso! Você será redirecionado para a página de login.');
-              window.location.href = 'telaDeLogin.html';
+              window.location.href = '/paginas/telaDeLogin.html';
           } catch (erro) {
               console.error('Erro ao redefinir senha:', erro);
               alert(erro.message || 'Erro ao redefinir senha. Por favor, tente novamente.');

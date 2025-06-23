@@ -74,7 +74,7 @@ function configurarLinksHeaderModal() {
                 const usuario = JSON.parse(localStorage.getItem('usuario'));
                 if (!usuario) {
                     alert('Por favor, faça login para acessar esta página');
-                    window.location.href = 'telaDeLogin.html';
+                    window.location.href = '/paginas/telaDeLogin.html';
                     return;
                 }
                 
@@ -96,7 +96,7 @@ function inicializarLogout() {
             e.preventDefault();
             localStorage.clear();
             sessionStorage.clear();
-            window.location.href = "telaDeLogin.html";
+            window.location.href = "/paginas/telaDeLogin.html";
         });
     }
 }

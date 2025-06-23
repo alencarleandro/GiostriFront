@@ -26,7 +26,7 @@ function configurarSidebar() {
                 e.preventDefault();
 
                 if (!usuarioLogado && destino !== "index.html") {
-                    window.location.href = "telaDeLogin.html";
+                    window.location.href = "/paginas/telaDeLogin.html";
                     return;
                 }
 
@@ -41,7 +41,7 @@ function configurarSidebar() {
             e.preventDefault();
             localStorage.clear();
             sessionStorage.clear();
-            window.location.href = "telaDeLogin.html";
+            window.location.href = "/paginas/telaDeLogin.html";
         });
     }
 }
